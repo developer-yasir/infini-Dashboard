@@ -50,24 +50,6 @@ _Coming soon..._
 
 ---
 
-## 📁 Folder Structure
-
-src/
-│
-├── components/
-│ └── SidebarMenu.jsx
-│
-├── pages/
-│ ├── Overview.jsx
-│ ├── Inventory.jsx
-│ ├── Reports.jsx
-│ └── Settings.jsx
-│
-├── index.css
-├── App.js
-└── index.js
-
-
 
 
 🔮 Upcoming Improvements
