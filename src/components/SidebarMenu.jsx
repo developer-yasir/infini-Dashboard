@@ -58,7 +58,7 @@ function SidebarMenu() {
           {/* Top Bar */}
           <div className="p-4 border-b bg-white dark:bg-gray-800 flex justify-between text-sm text-gray-700 dark:text-gray-100">
             <span>Welcome, <strong>{username || 'Guest'}</strong> 👋</span>
-            <span className="text-xs">{darkMode ? '🌙 Dark Mode' : '☀️ Light Mode'}</span>
+            {/* <span className="text-xs">{darkMode ? '🌙 Dark Mode' : '☀️ Light Mode'}</span>  */}
           </div>
 
           <Routes>

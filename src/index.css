@@ -1,11 +1,15 @@
-/* === Reset === */
-body {
+/* index.css */
+
+/* Reset */
+body, html {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
 }
 
-/* === Layout === */
+/* Layout */
 .dashboard {
   display: flex;
   height: 100vh;
@@ -13,22 +17,25 @@ body {
 
 .dashboard-left-side {
   width: 250px;
-  background-color: black;
+  background-color: #111;
   color: white;
   padding: 20px;
+  box-sizing: border-box;
 }
 
 .dashboard-right-side {
   flex: 1;
-  background-color: #f2f2f2;
-  padding: 0;
+  padding: 20px;
   overflow-y: auto;
+  background-color: #f2f2f2;
+  box-sizing: border-box;
 }
 
-/* === Sidebar === */
+/* Sidebar */
 .menu-main-container {
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
 
 .nav-logo {
@@ -40,7 +47,6 @@ body {
 .menu-main {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
 .menu-item {
@@ -51,131 +57,127 @@ body {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s ease;
 }
 
 .menu-item a:hover {
+  text-decoration: underline;
   color: #00cae1;
 }
 
-/* === Top Bar === */
-.top-bar {
-  padding: 16px;
-  background-color: white;
+/* Header Bar */
+.header-bar {
+  padding: 10px 20px;
+  background-color: #fff;
   border-bottom: 1px solid #ddd;
-  text-align: right;
+  display: flex;
+  justify-content: flex-end;
   font-size: 14px;
+  color: #555;
 }
 
-/* === Cards and Metrics === */
-.card {
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+/* Form */
+.form-group {
+  margin-bottom: 15px;
 }
 
-.card p {
-  font-size: 14px;
-  color: #777;
+.form-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
 }
 
-.card h3 {
-  font-size: 22px;
-  font-weight: 600;
-  margin-top: 8px;
-}
-
-/* === Overview Buttons === */
-.time-button {
-  padding: 8px 18px;
-  border-radius: 20px;
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px 10px;
   border: 1px solid #ccc;
-  background-color: #f1f1f1;
-  color: #333;
-  cursor: pointer;
-  transition: 0.3s;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
-.time-button:hover {
-  background-color: #ddd;
+.form-group input[type="checkbox"] {
+  width: auto;
+  margin-right: 8px;
 }
 
-.time-button.active {
+.button {
+  padding: 8px 16px;
   background-color: #2563eb;
   color: white;
-  border-color: #2563eb;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-/* === Chart Container === */
-.chart-container {
+.button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Cards */
+.card {
   background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 30px;
+  padding: 16px;
+  border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  text-align: center;
 }
 
-.chart-title {
-  font-size: 16px;
+.card-title {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 6px;
+}
+
+.card-value {
+  font-size: 20px;
   font-weight: bold;
-  margin-bottom: 12px;
 }
 
-/* === Alerts === */
-.alert-text {
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.grid-3-col > * {
+  flex: 1 1 calc(33.333% - 16px);
+  min-width: 200px;
+}
+
+.grid-4-col > * {
+  flex: 1 1 calc(25% - 16px);
+  min-width: 180px;
+}
+
+/* Alerts */
+.alert {
   color: red;
   font-weight: bold;
   margin-bottom: 20px;
-  text-align: center;
 }
 
-/* === Product Lists === */
-.product-lists {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  margin-top: 20px;
 }
 
-.product-section h4 {
-  font-weight: bold;
-  margin-bottom: 10px;
-  font-size: 16px;
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
 }
 
-.product-section ul {
-  list-style-type: disc;
+th {
+  background-color: #f1f1f1;
+}
+
+/* Lists */
+ul.list {
+  list-style: disc;
   padding-left: 20px;
-  font-size: 14px;
   color: #444;
-}
-
-/* === Responsive Grid === */
-.metrics-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 15px;
-  margin-bottom: 30px;
-}
-
-/* === Dark Mode Support === */
-body.dark,
-.dark .dashboard-right-side,
-.dark .card,
-.dark .chart-container {
-  background-color: #1e1e1e;
-  color: #fff;
-}
-
-.dark .card p,
-.dark .chart-title {
-  color: #ccc;
-}
-
-.dark input,
-.dark select {
-  background-color: #2e2e2e;
-  color: white;
-  border-color: #555;
+  font-size: 14px;
 }
