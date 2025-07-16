@@ -1,12 +1,8 @@
-import { useState } from 'react'
-import './App.css'
 import './index.css'
+import SidebarMenu from './components/SidebarMenu'
 
 function App() {
-
-  return (
-    <h1 className='bg-red-400'>hello</h1>
-  )
+  return <SidebarMenu />
 }
 
-export default App
+export default App;

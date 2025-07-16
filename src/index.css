@@ -1,1 +1,181 @@
-@import "tailwindcss";
+/* === Reset === */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* === Layout === */
+.dashboard {
+  display: flex;
+  height: 100vh;
+}
+
+.dashboard-left-side {
+  width: 250px;
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+
+.dashboard-right-side {
+  flex: 1;
+  background-color: #f2f2f2;
+  padding: 0;
+  overflow-y: auto;
+}
+
+/* === Sidebar === */
+.menu-main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.menu-main {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  margin-bottom: 10px;
+}
+
+.menu-item a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.menu-item a:hover {
+  color: #00cae1;
+}
+
+/* === Top Bar === */
+.top-bar {
+  padding: 16px;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  text-align: right;
+  font-size: 14px;
+}
+
+/* === Cards and Metrics === */
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card p {
+  font-size: 14px;
+  color: #777;
+}
+
+.card h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+/* === Overview Buttons === */
+.time-button {
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  color: #333;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.time-button:hover {
+  background-color: #ddd;
+}
+
+.time-button.active {
+  background-color: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+/* === Chart Container === */
+.chart-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.chart-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+/* === Alerts === */
+.alert-text {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* === Product Lists === */
+.product-lists {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.product-section h4 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.product-section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  font-size: 14px;
+  color: #444;
+}
+
+/* === Responsive Grid === */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+/* === Dark Mode Support === */
+body.dark,
+.dark .dashboard-right-side,
+.dark .card,
+.dark .chart-container {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.dark .card p,
+.dark .chart-title {
+  color: #ccc;
+}
+
+.dark input,
+.dark select {
+  background-color: #2e2e2e;
+  color: white;
+  border-color: #555;
+}
