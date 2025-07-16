@@ -1,13 +1,102 @@
-# React + Vite
+# Innfini Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight and customizable React-based inventory dashboard app — ideal for small businesses and internal product management. Users can add/edit/delete products, view analytics, generate reports, and manage preferences like username, currency, and dark mode.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔗 Live Demo
 
-## Expanding the ESLint configuration
+_Coming soon..._
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# infini-Dashboard
+---
+
+## ⚙️ Features
+
+### ✅ Core Functionalities
+- Product CRUD: Add, edit, delete products with name, price, quantity.
+- Local Storage Sync: Products and settings persist across page reloads.
+- Dashboard Overview:
+  - Total Products
+  - Total Quantity
+  - Inventory Value
+  - Average Price per Unit
+  - Out-of-Stock Warnings
+
+### 📊 Reports
+- Summary of inventory value
+- Out-of-stock item listing
+
+### 🛠 Settings
+- Change username (shown in top right greeting)
+- Select preferred currency (AED, USD, PKR)
+- Toggle global dark mode
+
+### 📈 Charts
+- Inventory value chart over last:
+  - 1 day, 3 days, 7 days, 30 days, 1 year
+- Recent and top expensive product summaries
+
+---
+
+## 🖥️ Tech Stack
+
+| Technology      | Purpose               |
+|-----------------|-----------------------|
+| React.js        | Frontend UI           |
+| React Router    | Client-side routing   |
+| Chart.js        | Inventory chart       |
+| Plain CSS       | App styling (no Tailwind) |
+| LocalStorage    | Persistent user data  |
+
+---
+
+## 📁 Folder Structure
+
+src/
+│
+├── components/
+│ └── SidebarMenu.jsx
+│
+├── pages/
+│ ├── Overview.jsx
+│ ├── Inventory.jsx
+│ ├── Reports.jsx
+│ └── Settings.jsx
+│
+├── index.css
+├── App.js
+└── index.js
+
+
+
+
+🔮 Upcoming Improvements
+ Export to CSV/Excel
+
+ Product category tags
+
+ Search & filtering
+
+ Firebase or MongoDB backend
+
+ Barcode scanner support
+
+ Multi-user login system
+
+
+
+👨‍💻 Developer Yasir
+MERN Stack Developer
+
+
+---
+
+## 🚀 Getting Started
+
+### 🛠 Installation
+
+```bash
+git clone https://github.com/your-username/inventory-dashboard.git
+cd inventory-dashboard
+npm install
+npm run dev
